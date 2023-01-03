@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
-const uri = process.env.MONGO_URI;
+// const uri = process.env.MONGO_URI;
 
 export const connectDatabase = ()=>{
-    mongoose.connect(uri).then(c=>{
+    mongoose.connect(process.env.MONGO_URI).then(c=>{
         console.log(`Mongodb connect to: ${c.connection.host}`);
     }).catch(e=>{
         console.log(e);
