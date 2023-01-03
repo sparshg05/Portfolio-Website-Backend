@@ -1,8 +1,10 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import path from "path";
-export const app = express();
+const cors = require('cors');
 
+export const app = express();
+app.use(cors());
 
 
 app.use(express.json({ limit:"50mb" }));
